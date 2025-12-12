@@ -20,7 +20,8 @@ class About(models.Model):
 #Skills    
 class Skill(models.Model):
     skill_name = models.CharField(max_length=100)
-    proficiency = models.IntegerField()
+    # icon = models.CharField(max_length=50,null=True,blank=True) 
+    # proficiency = models.IntegerField()
     
     def __str__(self):
         return self.skill_name
@@ -52,7 +53,7 @@ class ContactForm(models.Model):
 #Social Media  
 class SocialLink(models.Model):
     platform = models.CharField(max_length=50)
-    url = models.URLField()
+    url = models.CharField(max_length=100)
     icon = models.CharField(max_length=50)
     
     def __str__(self):
